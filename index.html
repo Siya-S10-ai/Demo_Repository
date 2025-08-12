@@ -39,14 +39,14 @@
                 </div>
             </div>
             <div class="contact-form-section" style="position: static; width: 340px;">
-                <form class="contact-form">
+                <form class="contact-form" autocomplete="on">
                     <h2>Reach Out</h2>
                     <label for="name">your name (optional)</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name">
                     <label for="email">email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
                     <label for="interest">interested in</label>
-                    <select id="interest" name="interest">
+                    <select id="interest" name="interest" autocomplete="off">
                         <option value="">Select a category</option>
                         <option value="nike">Nike</option>
                         <option value="adidas">Adidas</option>
@@ -55,7 +55,7 @@
                         <option value="converse">Converse</option>
                     </select>
                     <label for="message">message (optional)</label>
-                    <textarea id="message" name="message" placeholder="Type your message"></textarea>
+                    <textarea id="message" name="message" placeholder="Type your message" autocomplete="off"></textarea>
                     <button type="submit" class="submit-btn">Send</button>
                 </form>
             </div>

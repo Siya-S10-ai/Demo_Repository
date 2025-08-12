@@ -18,7 +18,7 @@ const sneakers = [
     },
     {
         name: "New Balance",
-        img: "newbalance1"
+        img: "assets/newbalance/newbalance1.jpg"
     }
 ];
 
