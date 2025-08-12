@@ -3,15 +3,64 @@
     <head>
         <title>My Web Page</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
-<body>
-    <h1>Welcome to My Web Page</h1>
-    <p>This is a simple HTML document.</p>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-logo">SneakerStore</div>
+        <ul class="nav-links">
+            <li><a href="about.html" target="_blank">about seller</a></li>
+            <li><a href="shoes.html" target="_blank">shoes</a></li>
+            <li><a href="tracksuits.html" target="_blank">tracksuits</a></li>
+            <li><a href="cart.html" target="_blank">cart</a></li>
+            <li><a href="checkout.html" target="_blank">checkout</a></li>
+            <li><a href="contact.html" target="_blank">contact us</a></li>
+        </ul>
+    </nav>
 
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <main>
+        <section class="sneaker-display-section" style="min-height: 90vh; display: flex; justify-content: center; align-items: center;">
+            <div class="sneaker-3d-container">
+                <img src="assets/nikeair/air1.jpg" alt="Sneaker" class="sneaker-3d" id="mainSneaker">
+                <div class="sneaker-3d-instructions">Hover left/right to rotate</div>
+            </div>
+        </section>
+        <section class="form-and-carousel-section" style="display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-start; gap: 2rem; padding: 3rem 2rem 2rem 2rem;">
+            <div class="sneaker-carousel-block">
+                <div class="carousel-image-container">
+                    <img src="assets/nikeair/air1.jpg" alt="Sneaker 1" class="carousel-image" id="carouselImage">
+                    <div class="carousel-sneaker-name" id="carouselSneakerName">Nike Air Max</div>
+                </div>
+                <div class="carousel-controls">
+                    <button id="prevSneaker" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextSneaker" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="contact-form-section" style="position: static; width: 340px;">
+                <form class="contact-form">
+                    <h2>Reach Out</h2>
+                    <label for="name">your name (optional)</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <label for="email">email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="interest">interested in</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select a category</option>
+                        <option value="nike">Nike</option>
+                        <option value="adidas">Adidas</option>
+                        <option value="puma">Puma</option>
+                        <option value="reebok">Reebok</option>
+                        <option value="converse">Converse</option>
+                    </select>
+                    <label for="message">message (optional)</label>
+                    <textarea id="message" name="message" placeholder="Type your message"></textarea>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
